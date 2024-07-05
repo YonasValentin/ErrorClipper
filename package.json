@@ -1,7 +1,7 @@
 {
   "name": "errorclipper",
   "displayName": "ErrorClipper",
-  "description": "Easily copy error messages to your clipboard and access GitHub Copilot Chat.",
+  "description": "Easily copy error messages to your clipboard.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.91.0"
@@ -19,6 +19,10 @@
       {
         "command": "errorclipper.copyErrorMessage",
         "title": "Copy Error Message"
+      },
+      {
+        "command": "errorclipper.copyErrorAndCode",
+        "title": "Copy Error and Code"
       }
     ]
   },
