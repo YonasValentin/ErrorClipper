@@ -14,6 +14,7 @@
     "Linters"
   ],
   "main": "./dist/extension.js",
+  "publisher": "YonasValentinMougaardKristensen",
   "contributes": {
     "commands": [
       {
