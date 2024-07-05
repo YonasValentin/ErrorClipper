@@ -1,71 +1,51 @@
-# errorclipper README
+# ErrorClipper
 
-This is the README for your extension "errorclipper". After writing up a brief description, we recommend including the following sections.
+![ErrorClipper Logo](https://github.com/YonasValentin/ErrorClipper/raw/main/resources/ErrorClipperLogo.webp)
+
+## Overview
+
+**ErrorClipper** is a Visual Studio Code extension designed to simplify the debugging process. It allows you to easily copy error messages to your clipboard and provides an option to copy both the error message and the entire content of the file containing the error.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Copy Error to Clipboard**: Instantly copy error messages to your clipboard with a single click.
+- **Copy Error and Code**: Copy both the error message and the entire content of the active file to your clipboard.
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use
 
-\!\[feature X\]\(images/feature-x.png\)
+1. **Activate the Extension**: Open the Command Palette (`Ctrl+Shift+P`), type `Activate ErrorClipper`, and select the command to activate the extension.
+2. **Copy Error Message**: Hover over an error in your code to see the tooltip. Click `Copy error to clipboard` to copy the error message.
+3. **Copy Error and Code**: Hover over an error in your code to see the tooltip. Click `Copy error and code` to copy both the error message and the entire content of the active file.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation
 
-## Requirements
+1. Install Visual Studio Code.
+2. Go to the Extensions view by clicking the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
+3. Search for `ErrorClipper` and install the extension.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Contributing
 
-## Extension Settings
+Contributions are welcome! Please submit issues and pull requests to the [GitHub repository](https://github.com/YonasValentin/ErrorClipper).
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## License
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## Following extension guidelines
+**Yonas Valentin Mougaard Kristensen**
+[Email](mailto:yonasmougaard@gmail.com)
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+---
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+### Buy Me a Coffee
 
-## Working with Markdown
+If you find this extension useful, please consider supporting my work:
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+As a passionate developer, I thrive on solving problems and creating tools that help others in their coding journey. ErrorClipper was born out of a desire to streamline the debugging process, making it easier and more efficient for developers like you.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+Your contributions can make a significant difference in my work. They not only help me maintain and improve this extension but also allow me to dedicate more time to creating new features and tools that can benefit the developer community.
 
-## For more information
+By supporting my work, you are directly contributing to the ongoing development and enhancement of ErrorClipper. Every bit of support helps, and I truly appreciate it.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/YonasValentin)
