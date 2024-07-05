@@ -2,7 +2,7 @@
   "name": "errorclipper",
   "displayName": "ErrorClipper",
   "description": "Easily copy error messages to your clipboard.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/YonasValentin/ErrorClipper"
@@ -15,6 +15,7 @@
   ],
   "main": "./dist/extension.js",
   "publisher": "YonasValentinMougaardKristensen",
+  "icon": "resources/ErrorClipperLogo.png",
   "contributes": {
     "commands": [
       {
