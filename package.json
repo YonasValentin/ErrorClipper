@@ -15,7 +15,7 @@
   ],
   "main": "./dist/extension.js",
   "publisher": "YonasValentinMougaardKristensen",
-  "icon": "/src/resources/ErrorClipperLogo.png",
+  "icon": "resources/ErrorClipperLogo.png",
   "contributes": {
     "commands": [
       {
