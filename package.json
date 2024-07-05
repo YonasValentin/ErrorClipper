@@ -1,16 +1,13 @@
 {
   "name": "errorclipper",
   "displayName": "ErrorClipper",
-  "description": "Easily copy error messages to your clipboard.",
+  "description": "Easily copy error messages to your clipboard and access GitHub Copilot Chat.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.91.0"
   },
   "categories": [
     "Linters"
-  ],
-  "activationEvents": [
-    "onCommand:errorclipper.activate"
   ],
   "main": "./dist/extension.js",
   "contributes": {
