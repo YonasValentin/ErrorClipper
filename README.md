@@ -1,6 +1,6 @@
 # ErrorClipper
 
-![ErrorClipper Logo](https://github.com/YonasValentin/ErrorClipper/raw/main/resources/ErrorClipperLogo.png)
+![ErrorClipper Logo](https://github.com/YonasValentin/ErrorClipper/blob/main/src/resources/ErrorClipperLogo.png)
 
 ## Overview
 
