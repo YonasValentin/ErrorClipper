@@ -1,6 +1,6 @@
 # ErrorClipper
 
-![ErrorClipper Logo](https://github.com/YonasValentin/ErrorClipper/blob/main/src/resources/ErrorClipperLogo.png)
+![ErrorClipper Logo](https://github.com/YonasValentin/ErrorClipper/blob/main/resources/ErrorClipperLogo.png)
 
 ## Overview
 
@@ -12,6 +12,8 @@
 - **Copy Error and Code**: Copy both the error message and the entire content of the active file to your clipboard.
 
 ## How to Use
+
+![Demo](https://github.com/YonasValentin/ErrorClipper/blob/main/resources/demo-errorclipper.gif)
 
 1. **Activate the Extension**: Open the Command Palette (`Ctrl+Shift+P`), type `Activate ErrorClipper`, and select the command to activate the extension.
 2. **Copy Error Message**: Hover over an error in your code to see the tooltip. Click `Copy error to clipboard` to copy the error message.
