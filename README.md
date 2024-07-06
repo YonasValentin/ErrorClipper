@@ -1,7 +1,3 @@
-# ErrorClipper
-
-![ErrorClipper Logo](/resources/ErrorClipperLogo.png)
-
 ## Overview
 
 **ErrorClipper** is a Visual Studio Code extension designed to simplify the debugging process. It allows you to easily copy error messages to your clipboard and provides an option to copy both the error message and the entire content of the file containing the error.

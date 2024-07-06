@@ -1,9 +1,15 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-  vscode.window.showInformationMessage(
-    'Congrats, ErrorClipper is now active - happy clipping!'
-  );
+  const hasShownMessageKey = 'errorclipper.hasShownMessage';
+  const hasShownMessage = context.globalState.get(hasShownMessageKey, false);
+
+  if (!hasShownMessage) {
+    vscode.window.showInformationMessage(
+      'Congrats, ErrorClipper is now active - happy clipping!'
+    );
+    context.globalState.update(hasShownMessageKey, true);
+  }
 
   // Register the hover provider
   context.subscriptions.push(
