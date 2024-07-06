@@ -11,9 +11,8 @@
 
 ![Demo](/resources/demo-errorclipper.gif)
 
-1. **Activate the Extension**: Open the Command Palette (`Ctrl+Shift+P`), type `Activate ErrorClipper`, and select the command to activate the extension.
-2. **Copy Error Message**: Hover over an error in your code to see the tooltip. Click `Copy error to clipboard` to copy the error message.
-3. **Copy Error and Code**: Hover over an error in your code to see the tooltip. Click `Copy error and code` to copy both the error message and the entire content of the active file.
+1. **Copy Error Message**: Hover over an error in your code to see the tooltip. Click `Copy error to clipboard` to copy the error message.
+2. **Copy Error and Code**: Hover over an error in your code to see the tooltip. Click `Copy error and code` to copy both the error message and the entire content of the active file.
 
 ## Installation
 
