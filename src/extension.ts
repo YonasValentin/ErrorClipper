@@ -12,14 +12,12 @@ export function activate(context: vscode.ExtensionContext) {
         const editor = vscode.window.activeTextEditor;
 
         if (editor) {
-          const range = document.getWordRangeAtPosition(position);
-          if (!range) {
-            return null;
-          }
+          const wordRange = document.getWordRangeAtPosition(position);
+          const hoverRange = wordRange || new vscode.Range(position, position);
 
           const diagnostics = vscode.languages.getDiagnostics(document.uri);
           const lineDiagnostics = diagnostics.filter((diagnostic) =>
-            diagnostic.range.contains(position)
+            diagnostic.range.intersection(hoverRange)
           );
 
           if (lineDiagnostics.length > 0) {
@@ -39,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
             );
             markdownString.isTrusted = true;
 
-            return new vscode.Hover(markdownString, range);
+            return new vscode.Hover(markdownString, hoverRange);
           }
         }
         return null;
