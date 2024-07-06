@@ -2,7 +2,7 @@
   "name": "errorclipper",
   "displayName": "ErrorClipper",
   "description": "Easily copy error messages to your clipboard.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/YonasValentin/ErrorClipper"
@@ -48,11 +48,26 @@
     ]
   },
   "keywords": [
-    "error",
-    "copy",
-    "clipboard",
-    "message",
-    "debugging"
+    "error handling",
+    "copy error messages",
+    "clipboard tools",
+    "debugging",
+    "bug fixing",
+    "exception handling",
+    "error fixing",
+    "troubleshoot",
+    "linting",
+    "code quality",
+    "refactoring",
+    "developer productivity",
+    "automation tools",
+    "workflow automation",
+    "coding efficiency",
+    "automated issue creation",
+    "error analysis",
+    "VS Code debugging",
+    "code troubleshooting",
+    "developer tools"
   ],
   "scripts": {
     "vscode:prepublish": "npm run package",
