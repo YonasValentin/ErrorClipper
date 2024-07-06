@@ -2,7 +2,7 @@
   "name": "errorclipper",
   "displayName": "ErrorClipper",
   "description": "Easily copy error messages to your clipboard.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/YonasValentin/ErrorClipper"
@@ -14,8 +14,7 @@
     "Linters"
   ],
   "activationEvents": [
-    "onStartupFinished",
-    "onCommand:errorclipper.activate"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "publisher": "YonasValentinMougaardKristensen",
