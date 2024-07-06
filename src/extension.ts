@@ -12,7 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
       // Register the hover provider
       context.subscriptions.push(
         vscode.languages.registerHoverProvider('*', {
-          provideHover(document, position, token) {
+          provideHover(document, position) {
             const editor = vscode.window.activeTextEditor;
 
             if (editor) {

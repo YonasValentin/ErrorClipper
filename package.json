@@ -14,7 +14,7 @@
     "Linters"
   ],
   "activationEvents": [
-    "onLanguage:*",
+    "onStartupFinished",
     "onCommand:errorclipper.activate"
   ],
   "main": "./dist/extension.js",
@@ -33,6 +33,18 @@
       {
         "command": "errorclipper.copyErrorAndCode",
         "title": "Copy Error and Code"
+      }
+    ],
+    "languages": [
+      {
+        "id": "plaintext",
+        "extensions": [
+          "*"
+        ],
+        "aliases": [
+          "Plain Text",
+          "text"
+        ]
       }
     ]
   },
