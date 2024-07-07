@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 
 const MAX_CLICKS = 5;
+const CONTRIBUTION_PROMPT_CLICKS = 25;
 
 async function promptForReview(context: vscode.ExtensionContext) {
   const choice = await vscode.window.showInformationMessage(
@@ -23,13 +24,40 @@ async function promptForReview(context: vscode.ExtensionContext) {
   context.globalState.update('errorclipper.clickCount', 0); // Reset count
 }
 
+async function promptForContribution(context: vscode.ExtensionContext) {
+  const choice = await vscode.window.showInformationMessage(
+    'You have used ErrorClipper extensively. Would you like to support its development?',
+    'Yes, I want to contribute',
+    'Already Contributed',
+    'Later'
+  );
+
+  if (choice === 'Yes, I want to contribute') {
+    vscode.env.openExternal(
+      vscode.Uri.parse('https://www.buymeacoffee.com/YonasValentin')
+    );
+  } else if (choice === 'Already Contributed') {
+    context.globalState.update('errorclipper.hasContributed', true);
+  }
+
+  context.globalState.update('errorclipper.contributionClickCount', 0); // Reset count
+}
+
 function incrementClickCount(context: vscode.ExtensionContext) {
   let clickCount = context.globalState.get<number>(
     'errorclipper.clickCount',
     0
   );
+  let contributionClickCount = context.globalState.get<number>(
+    'errorclipper.contributionClickCount',
+    0
+  );
   const hasLeftReview = context.globalState.get<boolean>(
     'errorclipper.hasLeftReview',
+    false
+  );
+  const hasContributed = context.globalState.get<boolean>(
+    'errorclipper.hasContributed',
     false
   );
 
@@ -39,6 +67,18 @@ function incrementClickCount(context: vscode.ExtensionContext) {
 
     if (clickCount >= MAX_CLICKS) {
       promptForReview(context);
+    }
+  }
+
+  if (!hasContributed) {
+    contributionClickCount += 1;
+    context.globalState.update(
+      'errorclipper.contributionClickCount',
+      contributionClickCount
+    );
+
+    if (contributionClickCount >= CONTRIBUTION_PROMPT_CLICKS) {
+      promptForContribution(context);
     }
   }
 }
