@@ -1,5 +1,48 @@
 import * as vscode from 'vscode';
 
+const MAX_CLICKS = 5;
+
+async function promptForReview(context: vscode.ExtensionContext) {
+  const choice = await vscode.window.showInformationMessage(
+    'You have used ErrorClipper a few times now. Would you like to leave a review?',
+    'Yes',
+    'Already Left a Review',
+    'Later'
+  );
+
+  if (choice === 'Yes') {
+    vscode.env.openExternal(
+      vscode.Uri.parse(
+        'https://marketplace.visualstudio.com/items?itemName=YonasValentinMougaardKristensen.errorclipper#review-details'
+      )
+    );
+  } else if (choice === 'Already Left a Review') {
+    context.globalState.update('errorclipper.hasLeftReview', true);
+  }
+
+  context.globalState.update('errorclipper.clickCount', 0); // Reset count
+}
+
+function incrementClickCount(context: vscode.ExtensionContext) {
+  let clickCount = context.globalState.get<number>(
+    'errorclipper.clickCount',
+    0
+  );
+  const hasLeftReview = context.globalState.get<boolean>(
+    'errorclipper.hasLeftReview',
+    false
+  );
+
+  if (!hasLeftReview) {
+    clickCount += 1;
+    context.globalState.update('errorclipper.clickCount', clickCount);
+
+    if (clickCount >= MAX_CLICKS) {
+      promptForReview(context);
+    }
+  }
+}
+
 export function activate(context: vscode.ExtensionContext) {
   const hasShownMessageKey = 'errorclipper.hasShownMessage';
   const hasShownMessage = context.globalState.get(hasShownMessageKey, false);
@@ -60,6 +103,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(
           'Error message copied to clipboard'
         );
+        incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage('No error message to copy.');
       }
@@ -78,6 +122,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(
           'Error message and code copied to clipboard'
         );
+        incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage('No error message or code to copy.');
       }
