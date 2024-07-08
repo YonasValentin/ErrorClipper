@@ -8,12 +8,9 @@
   "ALREADY_CONTRIBUTED": "Already Contributed",
   "CONGRATS_ERROR_CLIPPER_ACTIVE": "Congrats, ErrorClipper is now active - happy clipping!",
   "COPY_ERROR_MESSAGE_ONLY": "Copy Error Message Only",
-  "COPY_ERROR_MESSAGE_CODE_SNIPPET": "Copy Error Message and Code Snippet",
-  "COPY_ERROR_MESSAGE_CODE_FULL_FILE": "Copy Error Message, Code Snippet, and Full File",
+  "COPY_ERROR_MESSAGE_CODE_FULL_FILE": "Copy Error Message and Full File",
   "ERROR_MESSAGE_COPIED": "Error message copied to clipboard",
   "NO_ERROR_MESSAGE_COPY": "No error message to copy.",
-  "ERROR_MESSAGE_CODE_SNIPPET_COPIED": "Error message and code snippet copied to clipboard",
-  "NO_ERROR_MESSAGE_CODE_SNIPPET_COPY": "No error message or code snippet to copy.",
-  "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "Error message, code snippet, and full file copied to clipboard",
+  "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "Error message and code copied to clipboard",
   "NO_ERROR_MESSAGE_FULL_FILE_COPY": "No error message or full file to copy."
 }
