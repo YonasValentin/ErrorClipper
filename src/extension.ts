@@ -6,19 +6,19 @@ const CONTRIBUTION_PROMPT_CLICKS = 25;
 
 async function promptForReview(context: vscode.ExtensionContext) {
   const choice = await vscode.window.showInformationMessage(
-    'You have used ErrorClipper a few times now. Would you like to leave a review?',
-    'Yes',
-    'Already Left a Review',
-    'Later'
+    l10n.t('USED_ERROR_CLIPPER_FEW_TIMES_REVIEW'),
+    l10n.t('YES'),
+    l10n.t('ALREADY_LEFT_REVIEW'),
+    l10n.t('LATER')
   );
 
-  if (choice === 'Yes') {
+  if (choice === l10n.t('YES')) {
     vscode.env.openExternal(
       vscode.Uri.parse(
         'https://marketplace.visualstudio.com/items?itemName=YonasValentinMougaardKristensen.errorclipper#review-details'
       )
     );
-  } else if (choice === 'Already Left a Review') {
+  } else if (choice === l10n.t('ALREADY_LEFT_REVIEW')) {
     context.globalState.update('errorclipper.hasLeftReview', true);
   }
 
@@ -27,17 +27,17 @@ async function promptForReview(context: vscode.ExtensionContext) {
 
 async function promptForContribution(context: vscode.ExtensionContext) {
   const choice = await vscode.window.showInformationMessage(
-    'You have used ErrorClipper extensively. Would you like to support its development?',
-    'Yes, I want to contribute',
-    'Already Contributed',
-    'Later'
+    l10n.t('USED_ERROR_CLIPPER_EXTENSIVELY_CONTRIBUTE'),
+    l10n.t('YES_WANT_CONTRIBUTE'),
+    l10n.t('ALREADY_CONTRIBUTED'),
+    l10n.t('LATER')
   );
 
-  if (choice === 'Yes, I want to contribute') {
+  if (choice === l10n.t('YES_WANT_CONTRIBUTE')) {
     vscode.env.openExternal(
       vscode.Uri.parse('https://www.buymeacoffee.com/YonasValentin')
     );
-  } else if (choice === 'Already Contributed') {
+  } else if (choice === l10n.t('ALREADY_CONTRIBUTED')) {
     context.globalState.update('errorclipper.hasContributed', true);
   }
 
@@ -90,7 +90,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   if (!hasShownMessage) {
     vscode.window.showInformationMessage(
-      'Congrats, ErrorClipper is now active - happy clipping!'
+      l10n.t('CONGRATS_ERROR_CLIPPER_ACTIVE')
     );
     context.globalState.update(hasShownMessageKey, true);
   }
@@ -123,7 +123,11 @@ export function activate(context: vscode.ExtensionContext) {
               )}`
             );
             const markdownString = new vscode.MarkdownString(
-              `[Copy error to clipboard](${copyCommandUri})\n\n[Copy error and code](${copyFullCommandUri})`
+              `[${l10n.t(
+                'COPY_ERROR_MESSAGE_ONLY'
+              )}]( ${copyCommandUri})\n\n[${l10n.t(
+                'COPY_ERROR_MESSAGE_CODE_FULL_FILE'
+              )}](${copyFullCommandUri})`
             );
             markdownString.isTrusted = true;
 
@@ -141,12 +145,10 @@ export function activate(context: vscode.ExtensionContext) {
       if (args && args.message) {
         const { message } = args;
         vscode.env.clipboard.writeText(message);
-        vscode.window.showInformationMessage(
-          'Error message copied to clipboard'
-        );
+        vscode.window.showInformationMessage(l10n.t('ERROR_MESSAGE_COPIED'));
         incrementClickCount(context);
       } else {
-        vscode.window.showWarningMessage('No error message to copy.');
+        vscode.window.showWarningMessage(l10n.t('NO_ERROR_MESSAGE_COPY'));
       }
     })
   );
@@ -158,14 +160,18 @@ export function activate(context: vscode.ExtensionContext) {
       if (args && args.message && editor) {
         const { message } = args;
         const fullText = editor.document.getText();
-        const combinedText = `Error: ${message}\n\nCode:\n${fullText}`;
+        const combinedText = `${l10n.t(
+          'How do I fix this error?'
+        )}: ${message}\n\n${l10n.t('This is the code')}:\n${fullText}`;
         vscode.env.clipboard.writeText(combinedText);
         vscode.window.showInformationMessage(
-          'Error message and code copied to clipboard'
+          l10n.t('ERROR_MESSAGE_CODE_FULL_FILE_COPIED')
         );
         incrementClickCount(context);
       } else {
-        vscode.window.showWarningMessage('No error message or code to copy.');
+        vscode.window.showWarningMessage(
+          l10n.t('NO_ERROR_MESSAGE_FULL_FILE_COPY')
+        );
       }
     })
   );
