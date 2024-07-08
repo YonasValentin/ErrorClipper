@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import * as l10n from '@vscode/l10n';
 
 const MAX_CLICKS = 5;
 const CONTRIBUTION_PROMPT_CLICKS = 25;
