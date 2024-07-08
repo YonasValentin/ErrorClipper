@@ -45,6 +45,28 @@
           "text"
         ]
       }
+    ],
+    "localizations": [
+      {
+        "languageId": "en",
+        "languageName": "English",
+        "translations": [
+          {
+            "id": "vscode",
+            "path": "./i18n/en.json"
+          }
+        ]
+      },
+      {
+        "languageId": "zh-cn",
+        "languageName": "简体中文",
+        "translations": [
+          {
+            "id": "vscode",
+            "path": "./i18n/zh-cn.json"
+          }
+        ]
+      }
     ]
   },
   "keywords": [

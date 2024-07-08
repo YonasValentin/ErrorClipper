@@ -1,6 +1,0 @@
-{
-  "locales": {
-    "en": "./i18n/en.json",
-    "zh-cn": "./i18n/zh-cn.json"
-  }
-}

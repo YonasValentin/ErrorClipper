@@ -85,6 +85,11 @@ function incrementClickCount(context: vscode.ExtensionContext) {
 }
 
 export function activate(context: vscode.ExtensionContext) {
+  // Load the translations for the current locale
+  l10n.config({
+    fsPath: context.asAbsolutePath(`i18n/${vscode.env.language}.json`),
+  });
+
   const hasShownMessageKey = 'errorclipper.hasShownMessage';
   const hasShownMessage = context.globalState.get(hasShownMessageKey, false);
 
