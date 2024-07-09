@@ -151,7 +151,6 @@ export function activate(context: vscode.ExtensionContext) {
         const { message } = args;
         vscode.env.clipboard.writeText(message);
         vscode.window.showInformationMessage(l10n.t('ERROR_MESSAGE_COPIED'));
-
         incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage(l10n.t('NO_ERROR_MESSAGE_COPY'));
@@ -173,7 +172,6 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(
           l10n.t('ERROR_MESSAGE_CODE_FULL_FILE_COPIED')
         );
-
         incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage(
