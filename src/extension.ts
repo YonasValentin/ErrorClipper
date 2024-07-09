@@ -1,8 +1,33 @@
 import * as vscode from 'vscode';
 import * as l10n from '@vscode/l10n';
+import { PostHog } from 'posthog-node';
+import { v4 as uuidv4 } from 'uuid';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const posthogApiKey = process.env.POSTHOG_API_KEY;
+if (!posthogApiKey) {
+  throw new Error("You must pass your PostHog project's API key.");
+}
+
+// Initialize PostHog
+const posthogClient = new PostHog(posthogApiKey, {
+  host: 'https://us.i.posthog.com',
+});
 
 const MAX_CLICKS = 5;
 const CONTRIBUTION_PROMPT_CLICKS = 25;
+
+// Function to get or create a unique user ID
+function getUserId(context: vscode.ExtensionContext): string {
+  let userId = context.globalState.get<string>('errorclipper.userId');
+  if (!userId) {
+    userId = uuidv4();
+    context.globalState.update('errorclipper.userId', userId);
+  }
+  return userId;
+}
 
 async function promptForReview(context: vscode.ExtensionContext) {
   const choice = await vscode.window.showInformationMessage(
@@ -147,10 +172,18 @@ export function activate(context: vscode.ExtensionContext) {
   // Register the command to copy the error message
   context.subscriptions.push(
     vscode.commands.registerCommand('errorclipper.copyErrorMessage', (args) => {
+      const userId = getUserId(context);
       if (args && args.message) {
         const { message } = args;
         vscode.env.clipboard.writeText(message);
         vscode.window.showInformationMessage(l10n.t('ERROR_MESSAGE_COPIED'));
+
+        // Track the event
+        posthogClient.capture({
+          distinctId: userId,
+          event: 'Copy Error Message Clicked',
+        });
+
         incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage(l10n.t('NO_ERROR_MESSAGE_COPY'));
@@ -161,6 +194,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Register the command to copy the error message and the full code
   context.subscriptions.push(
     vscode.commands.registerCommand('errorclipper.copyErrorAndCode', (args) => {
+      const userId = getUserId(context);
       const editor = vscode.window.activeTextEditor;
       if (args && args.message && editor) {
         const { message } = args;
@@ -172,6 +206,13 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(
           l10n.t('ERROR_MESSAGE_CODE_FULL_FILE_COPIED')
         );
+
+        // Track the event
+        posthogClient.capture({
+          distinctId: userId,
+          event: 'Copy Error Message and Code Clicked',
+        });
+
         incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage(
@@ -182,4 +223,6 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-export function deactivate() {}
+export function deactivate() {
+  posthogClient.shutdown(); // Ensure all queued events are sent before shutting down
+}
