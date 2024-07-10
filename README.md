@@ -97,3 +97,54 @@ MIT 许可证。详见 [LICENSE](LICENSE)。
 通过支持我的工作，您将直接为 ErrorClipper 的持续开发和改进做出贡献。每一点支持对我来说都非常重要，我由衷地感谢您的帮助。
 
 [![请我喝杯咖啡](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/YonasValentin)
+
+---
+
+## Descripción
+
+**ErrorClipper** es una extensión de Visual Studio Code diseñada para simplificar el proceso de depuración. Te permite copiar fácilmente los mensajes de error en tu portapapeles y ofrece una opción para copiar tanto el mensaje de error como el contenido completo del archivo que contiene el error.
+
+## Funcionalidades
+
+- **Copiar error al portapapeles**: Copia instantáneamente los mensajes de error en tu portapapeles con un solo clic.
+- **Copiar error y código**: Copia tanto el mensaje de error como el contenido completo del archivo activo en tu portapapeles.
+
+## Cómo utilizar
+
+![Demostración](/resources/demo-errorclipper.gif)
+
+1. **Copiar mensaje de error**: Pasa el cursor sobre un error en tu código para ver la información emergente. Haz clic en `Copiar error al portapapeles` para copiar el mensaje de error.
+2. **Copiar error y código**: Pasa el cursor sobre un error en tu código para ver la información emergente. Haz clic en `Copiar error y código` para copiar tanto el mensaje de error como el contenido completo del archivo activo.
+
+## Instalación
+
+1. Instala Visual Studio Code.
+2. Ve a la vista de Extensiones haciendo clic en el ícono de Extensiones en la Barra de Actividades en el lado de la ventana o presionando `Ctrl+Shift+X`.
+3. Busca `ErrorClipper` e instala la extensión.
+
+## Contribuir
+
+¡Las contribuciones son bienvenidas! Por favor, envía problemas y solicitudes de extracción al [repositorio de GitHub](https://github.com/YonasValentin/ErrorClipper).
+
+## Licencia
+
+Licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
+
+---
+
+**Yonas Valentin Mougaard Kristensen**
+[Correo electrónico](mailto:yonasmougaard@gmail.com)
+
+---
+
+### Invítame un café
+
+Si encuentras útil esta extensión, por favor considera apoyar mi trabajo:
+
+Como desarrollador apasionado, me entusiasma resolver problemas y crear herramientas que ayuden a otros en su viaje de codificación. ErrorClipper nació del deseo de agilizar el proceso de depuración, haciéndolo más fácil y eficiente para desarrolladores como tú.
+
+Tus contribuciones pueden hacer una diferencia significativa en mi trabajo. No solo me ayudan a mantener y mejorar esta extensión, sino que también me permiten dedicar más tiempo a crear nuevas funcionalidades y herramientas que puedan beneficiar a la comunidad de desarrolladores.
+
+Al apoyar mi trabajo, estás contribuyendo directamente al desarrollo continuo y la mejora de ErrorClipper. Cada aporte cuenta, y realmente lo aprecio.
+
+[![Invítame un café](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/YonasValentin)

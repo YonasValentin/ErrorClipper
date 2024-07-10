@@ -2,7 +2,7 @@
   "name": "errorclipper",
   "displayName": "ErrorClipper",
   "description": "Easily copy error messages to your clipboard.",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/YonasValentin/ErrorClipper"
@@ -64,6 +64,16 @@
           {
             "id": "vscode",
             "path": "./i18n/zh-cn.json"
+          }
+        ]
+      },
+      {
+        "languageId": "es",
+        "languageName": "Español",
+        "translations": [
+          {
+            "id": "vscode",
+            "path": "./i18n/es.json"
           }
         ]
       }
