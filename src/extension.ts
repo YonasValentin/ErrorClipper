@@ -1,12 +1,12 @@
 import * as vscode from 'vscode';
 import * as l10n from '@vscode/l10n';
-import { v4 as uuidv4 } from 'uuid';
 import { PostHog } from 'posthog-node';
+import { v4 as uuidv4 } from 'uuid';
 import * as dotenv from 'dotenv';
+import { join } from 'path';
 
-dotenv.config();
-
-console.log('POSTHOG_API_KEY:', process.env.POSTHOG_API_KEY); // This should log the API key
+// Load environment variables from .env file
+dotenv.config({ path: join(__dirname, '../.env') });
 
 const posthogClient = new PostHog(process.env.POSTHOG_API_KEY as string, {
   host: 'https://us.i.posthog.com',
@@ -26,12 +26,21 @@ const MAX_CLICKS = 5;
 const CONTRIBUTION_PROMPT_CLICKS = 25;
 
 async function promptForReview(context: vscode.ExtensionContext) {
+  const userId = getUserId(context);
+
   const choice = await vscode.window.showInformationMessage(
     l10n.t('USED_ERROR_CLIPPER_FEW_TIMES_REVIEW'),
     l10n.t('YES'),
     l10n.t('ALREADY_LEFT_REVIEW'),
     l10n.t('LATER')
   );
+
+  // Track the review prompt choice
+  posthogClient.capture({
+    distinctId: userId,
+    event: 'Review Prompt Clicked',
+    properties: { choice },
+  });
 
   if (choice === l10n.t('YES')) {
     vscode.env.openExternal(
@@ -47,12 +56,21 @@ async function promptForReview(context: vscode.ExtensionContext) {
 }
 
 async function promptForContribution(context: vscode.ExtensionContext) {
+  const userId = getUserId(context);
+
   const choice = await vscode.window.showInformationMessage(
     l10n.t('USED_ERROR_CLIPPER_EXTENSIVELY_CONTRIBUTE'),
     l10n.t('YES_WANT_CONTRIBUTE'),
     l10n.t('ALREADY_CONTRIBUTED'),
     l10n.t('LATER')
   );
+
+  // Track the contribution prompt choice
+  posthogClient.capture({
+    distinctId: userId,
+    event: 'Contribution Prompt Clicked',
+    properties: { choice },
+  });
 
   if (choice === l10n.t('YES_WANT_CONTRIBUTE')) {
     vscode.env.openExternal(
@@ -151,7 +169,7 @@ export function activate(context: vscode.ExtensionContext) {
             const markdownString = new vscode.MarkdownString(
               `[${l10n.t(
                 'COPY_ERROR_MESSAGE_ONLY'
-              )}]( ${copyCommandUri})\n\n[${l10n.t(
+              )}](${copyCommandUri})\n\n[${l10n.t(
                 'COPY_ERROR_MESSAGE_CODE_FULL_FILE'
               )}](${copyFullCommandUri})`
             );
@@ -168,10 +186,19 @@ export function activate(context: vscode.ExtensionContext) {
   // Register the command to copy the error message
   context.subscriptions.push(
     vscode.commands.registerCommand('errorclipper.copyErrorMessage', (args) => {
+      const userId = getUserId(context);
+
       if (args && args.message) {
         const { message } = args;
         vscode.env.clipboard.writeText(message);
         vscode.window.showInformationMessage(l10n.t('ERROR_MESSAGE_COPIED'));
+
+        // Track the event
+        posthogClient.capture({
+          distinctId: userId,
+          event: 'Copy Error Message Clicked',
+        });
+
         incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage(l10n.t('NO_ERROR_MESSAGE_COPY'));
@@ -182,6 +209,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Register the command to copy the error message and the full code
   context.subscriptions.push(
     vscode.commands.registerCommand('errorclipper.copyErrorAndCode', (args) => {
+      const userId = getUserId(context);
       const editor = vscode.window.activeTextEditor;
       if (args && args.message && editor) {
         const { message } = args;
@@ -193,6 +221,13 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(
           l10n.t('ERROR_MESSAGE_CODE_FULL_FILE_COPIED')
         );
+
+        // Track the event
+        posthogClient.capture({
+          distinctId: userId,
+          event: 'Copy Error Message and Code Clicked',
+        });
+
         incrementClickCount(context);
       } else {
         vscode.window.showWarningMessage(
