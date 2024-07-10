@@ -1,5 +1,26 @@
 import * as vscode from 'vscode';
 import * as l10n from '@vscode/l10n';
+import { v4 as uuidv4 } from 'uuid';
+import { PostHog } from 'posthog-node';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+
+console.log('POSTHOG_API_KEY:', process.env.POSTHOG_API_KEY); // This should log the API key
+
+const posthogClient = new PostHog(process.env.POSTHOG_API_KEY as string, {
+  host: 'https://us.i.posthog.com',
+});
+
+// Function to get or create a unique user ID
+function getUserId(context: vscode.ExtensionContext): string {
+  let userId = context.globalState.get<string>('errorclipper.userId');
+  if (!userId) {
+    userId = uuidv4();
+    context.globalState.update('errorclipper.userId', userId);
+  }
+  return userId;
+}
 
 const MAX_CLICKS = 5;
 const CONTRIBUTION_PROMPT_CLICKS = 25;
@@ -182,4 +203,6 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-export function deactivate() {}
+export function deactivate() {
+  posthogClient.shutdown();
+}
