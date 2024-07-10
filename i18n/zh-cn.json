@@ -12,5 +12,8 @@
   "ERROR_MESSAGE_COPIED": "错误消息已复制到剪贴板",
   "NO_ERROR_MESSAGE_COPY": "没有要复制的错误消息。",
   "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "错误消息和代码已复制到剪贴板",
-  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "没有要复制的错误消息或完整文件。"
+  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "没有要复制的错误消息或完整文件。",
+  "COPY_ERROR_MESSAGE_CODE_SNIPPET": "复制错误消息和相关代码片段",
+  "ERROR_MESSAGE_CODE_SNIPPET_COPIED": "错误消息和代码片段已复制到剪贴板",
+  "NO_ERROR_MESSAGE_SNIPPET_COPY": "没有要复制的错误消息或片段。"
 }

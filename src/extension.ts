@@ -123,6 +123,45 @@ function incrementClickCount(context: vscode.ExtensionContext) {
   }
 }
 
+function getRelatedSnippet(
+  document: vscode.TextDocument,
+  line: number,
+  contextLines: number = 3
+): string {
+  const startLine = Math.max(0, line - contextLines);
+  const endLine = Math.min(document.lineCount - 1, line + contextLines);
+  let snippet = '';
+
+  for (let i = startLine; i <= endLine; i++) {
+    snippet += document.lineAt(i).text + '\n';
+  }
+
+  return snippet;
+}
+
+async function copyErrorAndSnippet(
+  message: string,
+  line: number,
+  document: vscode.TextDocument,
+  userId: string,
+  context: vscode.ExtensionContext
+) {
+  const relatedSnippet = getRelatedSnippet(document, line);
+  const combinedText = `Error: ${message}\n\nRelated Code Snippet:\n${relatedSnippet}`;
+  await vscode.env.clipboard.writeText(combinedText);
+  vscode.window.showInformationMessage(
+    l10n.t('ERROR_MESSAGE_CODE_SNIPPET_COPIED')
+  );
+
+  // Track the event
+  posthogClient.capture({
+    distinctId: userId,
+    event: 'Copy Error Message and Snippet Clicked',
+  });
+
+  incrementClickCount(context);
+}
+
 export function activate(context: vscode.ExtensionContext) {
   // Load the translations for the current locale
   l10n.config({
@@ -161,6 +200,11 @@ export function activate(context: vscode.ExtensionContext) {
                 JSON.stringify({ message })
               )}`
             );
+            const copySnippetCommandUri = vscode.Uri.parse(
+              `command:errorclipper.copyErrorAndSnippet?${encodeURIComponent(
+                JSON.stringify({ message, line: position.line })
+              )}`
+            );
             const copyFullCommandUri = vscode.Uri.parse(
               `command:errorclipper.copyErrorAndCode?${encodeURIComponent(
                 JSON.stringify({ message })
@@ -170,6 +214,8 @@ export function activate(context: vscode.ExtensionContext) {
               `[${l10n.t(
                 'COPY_ERROR_MESSAGE_ONLY'
               )}](${copyCommandUri})\n\n[${l10n.t(
+                'COPY_ERROR_MESSAGE_CODE_SNIPPET'
+              )}](${copySnippetCommandUri})\n\n[${l10n.t(
                 'COPY_ERROR_MESSAGE_CODE_FULL_FILE'
               )}](${copyFullCommandUri})`
             );
@@ -204,6 +250,26 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showWarningMessage(l10n.t('NO_ERROR_MESSAGE_COPY'));
       }
     })
+  );
+
+  // Register the command to copy the error message and the related code snippet
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      'errorclipper.copyErrorAndSnippet',
+      async (args) => {
+        const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+          vscode.window.showErrorMessage('No active editor');
+          return;
+        }
+
+        const userId = getUserId(context);
+        const { message, line } = args;
+        const document = editor.document;
+
+        await copyErrorAndSnippet(message, line, document, userId, context);
+      }
+    )
   );
 
   // Register the command to copy the error message and the full code

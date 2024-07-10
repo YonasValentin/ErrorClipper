@@ -1,18 +1,20 @@
 ## Overview
 
-**ErrorClipper** is a Visual Studio Code extension designed to simplify the debugging process. It allows you to easily copy error messages to your clipboard and provides an option to copy both the error message and the entire content of the file containing the error.
+**ErrorClipper** is a Visual Studio Code extension designed to simplify the debugging process. It allows you to easily copy error messages to your clipboard and provides options to copy both the error message and the entire content of the file containing the error, or just the related code snippet.
 
 ## Features
 
 - **Copy Error to Clipboard**: Instantly copy error messages to your clipboard with a single click.
-- **Copy Error and Code**: Copy both the error message and the entire content of the active file to your clipboard.
+- **Copy Error and Related Code Snippet**: Copy the error message and a snippet of the related code to your clipboard.
+- **Copy Error and Full File**: Copy both the error message and the entire content of the active file to your clipboard.
 
 ## How to Use
 
 ![Demo](/resources/demo-errorclipper.gif)
 
 1. **Copy Error Message**: Hover over an error in your code to see the tooltip. Click `Copy error to clipboard` to copy the error message.
-2. **Copy Error and Code**: Hover over an error in your code to see the tooltip. Click `Copy error and code` to copy both the error message and the entire content of the active file.
+2. **Copy Error and Related Code Snippet**: Hover over an error in your code to see the tooltip. Click `Copy error and related code snippet` to copy the error message and a snippet of the related code.
+3. **Copy Error and Full File**: Hover over an error in your code to see the tooltip. Click `Copy error and full file` to copy both the error message and the entire content of the active file.
 
 ## Installation
 
@@ -30,7 +32,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-**Yonas Valentin Mougaard Kristensen**
+**Yonas Valentin Mougaard Kristensen**  
 [Email](mailto:yonasmougaard@gmail.com)
 
 ---
@@ -51,19 +53,21 @@ By supporting my work, you are directly contributing to the ongoing development 
 
 ## 概述
 
-**ErrorClipper** 是一个为 Visual Studio Code 设计的扩展，旨在简化调试过程。它允许您轻松地将错误消息复制到剪贴板，并提供一个选项，允许您将错误消息和包含错误的文件的整个内容一起复制。
+**ErrorClipper** 是一个为 Visual Studio Code 设计的扩展，旨在简化调试过程。它允许您轻松地将错误消息复制到剪贴板，并提供选项，将错误消息和包含错误的文件的整个内容一起复制，或仅复制相关代码片段。
 
 ## 功能
 
 - **复制错误到剪贴板**：一键即可将错误消息复制到剪贴板。
-- **复制错误和代码**：将错误消息和当前文件的全部内容一起复制到剪贴板。
+- **复制错误和相关代码片段**：将错误消息和相关代码片段一起复制到剪贴板。
+- **复制错误和完整文件**：将错误消息和当前文件的全部内容一起复制到剪贴板。
 
 ## 使用方法
 
 ![演示](/resources/demo-errorclipper.gif)
 
 1. **复制错误消息**：将鼠标悬停在代码中的错误上以查看工具提示。点击 `Copy error to clipboard` 将错误消息复制到剪贴板。
-2. **复制错误和代码**：将鼠标悬停在代码中的错误上以查看工具提示。点击 `Copy error and code` 将错误消息和当前文件的全部内容一起复制到剪贴板。
+2. **复制错误和相关代码片段**：将鼠标悬停在代码中的错误上以查看工具提示。点击 `Copy error and related code snippet` 将错误消息和相关代码片段一起复制到剪贴板。
+3. **复制错误和完整文件**：将鼠标悬停在代码中的错误上以查看工具提示。点击 `Copy error and full file` 将错误消息和当前文件的全部内容一起复制到剪贴板。
 
 ## 安装
 
@@ -81,7 +85,7 @@ MIT 许可证。详见 [LICENSE](LICENSE)。
 
 ---
 
-**Yonas Valentin Mougaard Kristensen**
+**Yonas Valentin Mougaard Kristensen**  
 [电子邮件](mailto:yonasmougaard@gmail.com)
 
 ---
@@ -102,19 +106,21 @@ MIT 许可证。详见 [LICENSE](LICENSE)。
 
 ## Descripción
 
-**ErrorClipper** es una extensión de Visual Studio Code diseñada para simplificar el proceso de depuración. Te permite copiar fácilmente los mensajes de error en tu portapapeles y ofrece una opción para copiar tanto el mensaje de error como el contenido completo del archivo que contiene el error.
+**ErrorClipper** es una extensión de Visual Studio Code diseñada para simplificar el proceso de depuración. Te permite copiar fácilmente los mensajes de error en tu portapapeles y ofrece opciones para copiar tanto el mensaje de error como el contenido completo del archivo que contiene el error, o solo el fragmento de código relacionado.
 
 ## Funcionalidades
 
 - **Copiar error al portapapeles**: Copia instantáneamente los mensajes de error en tu portapapeles con un solo clic.
-- **Copiar error y código**: Copia tanto el mensaje de error como el contenido completo del archivo activo en tu portapapeles.
+- **Copiar error y fragmento de código relacionado**: Copia el mensaje de error y un fragmento del código relacionado en tu portapapeles.
+- **Copiar error y archivo completo**: Copia tanto el mensaje de error como el contenido completo del archivo activo en tu portapapeles.
 
 ## Cómo utilizar
 
 ![Demostración](/resources/demo-errorclipper.gif)
 
 1. **Copiar mensaje de error**: Pasa el cursor sobre un error en tu código para ver la información emergente. Haz clic en `Copiar error al portapapeles` para copiar el mensaje de error.
-2. **Copiar error y código**: Pasa el cursor sobre un error en tu código para ver la información emergente. Haz clic en `Copiar error y código` para copiar tanto el mensaje de error como el contenido completo del archivo activo.
+2. **Copiar error y fragmento de código relacionado**: Pasa el cursor sobre un error en tu código para ver la información emergente. Haz clic en `Copiar error y fragmento de código relacionado` para copiar el mensaje de error y un fragmento del código relacionado.
+3. **Copiar error y archivo completo**: Pasa el cursor sobre un error en tu código para ver la información emergente. Haz clic en `Copiar error y archivo completo` para copiar tanto el mensaje de error como el contenido completo del archivo activo.
 
 ## Instalación
 
@@ -132,7 +138,7 @@ Licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
 
 ---
 
-**Yonas Valentin Mougaard Kristensen**
+**Yonas Valentin Mougaard Kristensen**  
 [Correo electrónico](mailto:yonasmougaard@gmail.com)
 
 ---
@@ -153,19 +159,21 @@ Al apoyar mi trabajo, estás contribuyendo directamente al desarrollo continuo y
 
 ## Übersicht
 
-**ErrorClipper** ist eine Erweiterung für Visual Studio Code, die den Debugging-Prozess vereinfachen soll. Sie ermöglicht es Ihnen, Fehlermeldungen einfach in Ihre Zwischenablage zu kopieren und bietet eine Option, sowohl die Fehlermeldung als auch den gesamten Inhalt der Datei, die den Fehler enthält, zu kopieren.
+**ErrorClipper** ist eine Erweiterung für Visual Studio Code, die den Debugging-Prozess vereinfachen soll. Sie ermöglicht es Ihnen, Fehlermeldungen einfach in Ihre Zwischenablage zu kopieren und bietet Optionen, sowohl die Fehlermeldung als auch den gesamten Inhalt der Datei, die den Fehler enthält, zu kopieren, oder nur den relevanten Codeabschnitt.
 
 ## Funktionen
 
 - **Fehler in Zwischenablage kopieren**: Kopieren Sie Fehlermeldungen mit einem einzigen Klick in Ihre Zwischenablage.
-- **Fehler und Code kopieren**: Kopieren Sie sowohl die Fehlermeldung als auch den gesamten Inhalt der aktiven Datei in Ihre Zwischenablage.
+- **Fehler und relevanten Codeabschnitt kopieren**: Kopieren Sie die Fehlermeldung und einen relevanten Codeabschnitt in Ihre Zwischenablage.
+- **Fehler und gesamte Datei kopieren**: Kopieren Sie sowohl die Fehlermeldung als auch den gesamten Inhalt der aktiven Datei in Ihre Zwischenablage.
 
 ## Anwendung
 
 ![Demo](/resources/demo-errorclipper.gif)
 
 1. **Fehlermeldung kopieren**: Bewegen Sie den Mauszeiger über einen Fehler in Ihrem Code, um das Tooltip zu sehen. Klicken Sie auf `Fehler in Zwischenablage kopieren`, um die Fehlermeldung zu kopieren.
-2. **Fehler und Code kopieren**: Bewegen Sie den Mauszeiger über einen Fehler in Ihrem Code, um das Tooltip zu sehen. Klicken Sie auf `Fehler und Code kopieren`, um sowohl die Fehlermeldung als auch den gesamten Inhalt der aktiven Datei zu kopieren.
+2. **Fehler und relevanten Codeabschnitt kopieren**: Bewegen Sie den Mauszeiger über einen Fehler in Ihrem Code, um das Tooltip zu sehen. Klicken Sie auf `Fehler und relevanten Codeabschnitt kopieren`, um die Fehlermeldung und den relevanten Codeabschnitt zu kopieren.
+3. **Fehler und gesamte Datei kopieren**: Bewegen Sie den Mauszeiger über einen Fehler in Ihrem Code, um das Tooltip zu sehen. Klicken Sie auf `Fehler und gesamte Datei kopieren`, um sowohl die Fehlermeldung als auch den gesamten Inhalt der aktiven Datei zu kopieren.
 
 ## Installation
 
@@ -183,7 +191,7 @@ MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details.
 
 ---
 
-**Yonas Valentin Mougaard Kristensen**
+**Yonas Valentin Mougaard Kristensen**  
 [E-Mail](mailto:yonasmougaard@gmail.com)
 
 ---

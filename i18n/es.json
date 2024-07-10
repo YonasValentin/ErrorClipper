@@ -12,5 +12,8 @@
   "ERROR_MESSAGE_COPIED": "Mensaje de error copiado al portapapeles",
   "NO_ERROR_MESSAGE_COPY": "No hay mensaje de error para copiar.",
   "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "Mensaje de error y código copiados al portapapeles",
-  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "No hay mensaje de error o archivo completo para copiar."
+  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "No hay mensaje de error o archivo completo para copiar.",
+  "COPY_ERROR_MESSAGE_CODE_SNIPPET": "Copiar mensaje de error y fragmento de código relacionado",
+  "ERROR_MESSAGE_CODE_SNIPPET_COPIED": "Mensaje de error y fragmento de código copiados al portapapeles",
+  "NO_ERROR_MESSAGE_SNIPPET_COPY": "No hay mensaje de error o fragmento para copiar."
 }

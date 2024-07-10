@@ -12,5 +12,8 @@
   "ERROR_MESSAGE_COPIED": "Fehlermeldung in die Zwischenablage kopiert",
   "NO_ERROR_MESSAGE_COPY": "Keine Fehlermeldung zum Kopieren.",
   "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "Fehlermeldung und Code in die Zwischenablage kopiert",
-  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "Keine Fehlermeldung oder vollständige Datei zum Kopieren."
+  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "Keine Fehlermeldung oder vollständige Datei zum Kopieren.",
+  "COPY_ERROR_MESSAGE_CODE_SNIPPET": "Fehlermeldung und zugehörigen Codeabschnitt kopieren",
+  "ERROR_MESSAGE_CODE_SNIPPET_COPIED": "Fehlermeldung und Codeabschnitt in die Zwischenablage kopiert",
+  "NO_ERROR_MESSAGE_SNIPPET_COPY": "Keine Fehlermeldung oder Abschnitt zum Kopieren."
 }

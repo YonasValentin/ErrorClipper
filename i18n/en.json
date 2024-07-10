@@ -12,5 +12,8 @@
   "ERROR_MESSAGE_COPIED": "Error message copied to clipboard",
   "NO_ERROR_MESSAGE_COPY": "No error message to copy.",
   "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "Error message and code copied to clipboard",
-  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "No error message or full file to copy."
+  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "No error message or full file to copy.",
+  "COPY_ERROR_MESSAGE_CODE_SNIPPET": "Copy Error Message and Related Code Snippet",
+  "ERROR_MESSAGE_CODE_SNIPPET_COPIED": "Error message and code snippet copied to clipboard",
+  "NO_ERROR_MESSAGE_SNIPPET_COPY": "No error message or snippet to copy."
 }
