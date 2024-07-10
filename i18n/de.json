@@ -1,0 +1,16 @@
+{
+  "USED_ERROR_CLIPPER_FEW_TIMES_REVIEW": "Sie haben ErrorClipper ein paar Mal verwendet. Möchten Sie eine Bewertung hinterlassen?",
+  "YES": "Ja",
+  "ALREADY_LEFT_REVIEW": "Bereits bewertet",
+  "LATER": "Später",
+  "USED_ERROR_CLIPPER_EXTENSIVELY_CONTRIBUTE": "Sie haben ErrorClipper ausgiebig verwendet. Möchten Sie die Entwicklung unterstützen?",
+  "YES_WANT_CONTRIBUTE": "Ja, ich möchte beitragen",
+  "ALREADY_CONTRIBUTED": "Bereits beigetragen",
+  "CONGRATS_ERROR_CLIPPER_ACTIVE": "Glückwunsch, ErrorClipper ist jetzt aktiv - viel Spaß beim Kopieren!",
+  "COPY_ERROR_MESSAGE_ONLY": "Nur Fehlermeldung kopieren",
+  "COPY_ERROR_MESSAGE_CODE_FULL_FILE": "Fehlermeldung und gesamte Datei kopieren",
+  "ERROR_MESSAGE_COPIED": "Fehlermeldung in die Zwischenablage kopiert",
+  "NO_ERROR_MESSAGE_COPY": "Keine Fehlermeldung zum Kopieren.",
+  "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "Fehlermeldung und Code in die Zwischenablage kopiert",
+  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "Keine Fehlermeldung oder vollständige Datei zum Kopieren."
+}

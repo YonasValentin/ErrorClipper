@@ -76,6 +76,16 @@
             "path": "./i18n/es.json"
           }
         ]
+      },
+      {
+        "languageId": "de",
+        "languageName": "Deutsch",
+        "translations": [
+          {
+            "id": "vscode",
+            "path": "./i18n/de.json"
+          }
+        ]
       }
     ]
   },

@@ -148,3 +148,54 @@ Tus contribuciones pueden hacer una diferencia significativa en mi trabajo. No s
 Al apoyar mi trabajo, estás contribuyendo directamente al desarrollo continuo y la mejora de ErrorClipper. Cada aporte cuenta, y realmente lo aprecio.
 
 [![Invítame un café](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/YonasValentin)
+
+---
+
+## Übersicht
+
+**ErrorClipper** ist eine Erweiterung für Visual Studio Code, die den Debugging-Prozess vereinfachen soll. Sie ermöglicht es Ihnen, Fehlermeldungen einfach in Ihre Zwischenablage zu kopieren und bietet eine Option, sowohl die Fehlermeldung als auch den gesamten Inhalt der Datei, die den Fehler enthält, zu kopieren.
+
+## Funktionen
+
+- **Fehler in Zwischenablage kopieren**: Kopieren Sie Fehlermeldungen mit einem einzigen Klick in Ihre Zwischenablage.
+- **Fehler und Code kopieren**: Kopieren Sie sowohl die Fehlermeldung als auch den gesamten Inhalt der aktiven Datei in Ihre Zwischenablage.
+
+## Anwendung
+
+![Demo](/resources/demo-errorclipper.gif)
+
+1. **Fehlermeldung kopieren**: Bewegen Sie den Mauszeiger über einen Fehler in Ihrem Code, um das Tooltip zu sehen. Klicken Sie auf `Fehler in Zwischenablage kopieren`, um die Fehlermeldung zu kopieren.
+2. **Fehler und Code kopieren**: Bewegen Sie den Mauszeiger über einen Fehler in Ihrem Code, um das Tooltip zu sehen. Klicken Sie auf `Fehler und Code kopieren`, um sowohl die Fehlermeldung als auch den gesamten Inhalt der aktiven Datei zu kopieren.
+
+## Installation
+
+1. Installieren Sie Visual Studio Code.
+2. Gehen Sie zur Ansicht Erweiterungen, indem Sie auf das Symbol Erweiterungen in der Aktivitätsleiste an der Seite des Fensters klicken oder `Strg+Shift+X` drücken.
+3. Suchen Sie nach `ErrorClipper` und installieren Sie die Erweiterung.
+
+## Mitwirken
+
+Beiträge sind willkommen! Bitte senden Sie Probleme und Pull-Anfragen an das [GitHub-Repository](https://github.com/YonasValentin/ErrorClipper).
+
+## Lizenz
+
+MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details.
+
+---
+
+**Yonas Valentin Mougaard Kristensen**
+[E-Mail](mailto:yonasmougaard@gmail.com)
+
+---
+
+### Spendieren Sie mir einen Kaffee
+
+Wenn Sie diese Erweiterung nützlich finden, erwägen Sie bitte, meine Arbeit zu unterstützen:
+
+Als leidenschaftlicher Entwickler habe ich Freude daran, Probleme zu lösen und Werkzeuge zu erstellen, die anderen auf ihrem Coding-Weg helfen. ErrorClipper entstand aus dem Wunsch, den Debugging-Prozess zu optimieren und ihn für Entwickler wie Sie einfacher und effizienter zu gestalten.
+
+Ihre Beiträge können einen erheblichen Unterschied in meiner Arbeit machen. Sie helfen mir nicht nur, diese Erweiterung zu pflegen und zu verbessern, sondern ermöglichen es mir auch, mehr Zeit für die Entwicklung neuer Funktionen und Werkzeuge aufzuwenden, die der Entwickler-Community zugutekommen.
+
+Indem Sie meine Arbeit unterstützen, tragen Sie direkt zur kontinuierlichen Entwicklung und Verbesserung von ErrorClipper bei. Jede Unterstützung zählt, und ich schätze sie sehr.
+
+[![Spendieren Sie mir einen Kaffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/YonasValentin)

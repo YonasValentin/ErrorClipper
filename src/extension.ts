@@ -8,6 +8,8 @@ import { join } from 'path';
 // Load environment variables from .env file
 dotenv.config({ path: join(__dirname, '../.env') });
 
+console.log('POSTHOG_API_KEY:', process.env.POSTHOG_API_KEY); // This should log the API key
+
 const posthogClient = new PostHog(process.env.POSTHOG_API_KEY as string, {
   host: 'https://us.i.posthog.com',
 });
