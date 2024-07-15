@@ -1,0 +1,19 @@
+{
+  "USED_ERROR_CLIPPER_FEW_TIMES_REVIEW": "Vous avez utilisé ErrorClipper plusieurs fois maintenant. Souhaitez-vous laisser un avis ?",
+  "YES": "Oui",
+  "ALREADY_LEFT_REVIEW": "Déjà laissé un avis",
+  "LATER": "Plus tard",
+  "USED_ERROR_CLIPPER_EXTENSIVELY_CONTRIBUTE": "Vous avez beaucoup utilisé ErrorClipper. Souhaitez-vous soutenir son développement ?",
+  "YES_WANT_CONTRIBUTE": "Oui, je veux contribuer",
+  "ALREADY_CONTRIBUTED": "Déjà contribué",
+  "CONGRATS_ERROR_CLIPPER_ACTIVE": "Félicitations, ErrorClipper est maintenant actif - bon clipping !",
+  "COPY_ERROR_MESSAGE_ONLY": "Copier uniquement le message d'erreur",
+  "COPY_ERROR_MESSAGE_CODE_FULL_FILE": "Copier le message d'erreur et le fichier complet",
+  "ERROR_MESSAGE_COPIED": "Message d'erreur copié dans le presse-papiers",
+  "NO_ERROR_MESSAGE_COPY": "Aucun message d'erreur à copier.",
+  "ERROR_MESSAGE_CODE_FULL_FILE_COPIED": "Message d'erreur et code copié dans le presse-papiers",
+  "NO_ERROR_MESSAGE_FULL_FILE_COPY": "Aucun message d'erreur ou fichier complet à copier.",
+  "COPY_ERROR_MESSAGE_CODE_SNIPPET": "Copier le message d'erreur et l'extrait de code concerné",
+  "ERROR_MESSAGE_CODE_SNIPPET_COPIED": "Message d'erreur et extrait de code copié dans le presse-papiers",
+  "NO_ERROR_MESSAGE_SNIPPET_COPY": "Aucun message d'erreur ou extrait à copier."
+}

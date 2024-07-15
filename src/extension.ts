@@ -178,6 +178,13 @@ export function activate(context: vscode.ExtensionContext) {
     context.globalState.update(hasShownMessageKey, true);
   }
 
+  // Track extension activation (download event)
+  const userId = getUserId(context);
+  posthogClient.capture({
+    distinctId: userId,
+    event: 'Extension Activated',
+  });
+
   // Register the hover provider
   context.subscriptions.push(
     vscode.languages.registerHoverProvider('*', {

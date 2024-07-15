@@ -207,3 +207,56 @@ Ihre Beiträge können einen erheblichen Unterschied in meiner Arbeit machen. Si
 Indem Sie meine Arbeit unterstützen, tragen Sie direkt zur kontinuierlichen Entwicklung und Verbesserung von ErrorClipper bei. Jede Unterstützung zählt, und ich schätze sie sehr.
 
 [![Spendieren Sie mir einen Kaffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/YonasValentin)
+
+---
+
+## Aperçu
+
+**ErrorClipper** est une extension Visual Studio Code conçue pour simplifier le processus de débogage. Elle vous permet de copier facilement les messages d'erreur dans votre presse-papiers et offre des options pour copier à la fois le message d'erreur et le contenu complet du fichier contenant l'erreur, ou simplement l'extrait de code concerné.
+
+## Fonctionnalités
+
+- **Copier l'erreur dans le presse-papiers** : Copiez instantanément les messages d'erreur dans votre presse-papiers en un seul clic.
+- **Copier l'erreur et l'extrait de code concerné** : Copiez le message d'erreur et un extrait du code concerné dans votre presse-papiers.
+- **Copier l'erreur et le fichier complet** : Copiez à la fois le message d'erreur et le contenu complet du fichier actif dans votre presse-papiers.
+
+## Comment utiliser
+
+![Démo](/resources/demo-errorclipper.gif)
+
+1. **Copier le message d'erreur** : Survolez une erreur dans votre code pour voir l'infobulle. Cliquez sur `Copier l'erreur dans le presse-papiers` pour copier le message d'erreur.
+2. **Copier l'erreur et l'extrait de code concerné** : Survolez une erreur dans votre code pour voir l'infobulle. Cliquez sur `Copier l'erreur et l'extrait de code concerné` pour copier le message d'erreur et un extrait du code concerné.
+3. **Copier l'erreur et le fichier complet** : Survolez une erreur dans votre code pour voir l'infobulle. Cliquez sur `Copier l'erreur et le fichier complet` pour copier à la fois le message d'erreur et le contenu complet du fichier actif.
+
+## Installation
+
+1. Installez Visual Studio Code.
+2. Accédez à la vue Extensions en cliquant sur l'icône Extensions dans la barre d'activités sur le côté de la fenêtre ou en appuyant sur `Ctrl+Shift+X`.
+3. Recherchez `ErrorClipper` et installez l'extension.
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Veuillez soumettre les problèmes et les demandes de tirage au [dépôt GitHub](https://github.com/YonasValentin/ErrorClipper).
+
+## Licence
+
+Licence MIT. Voir [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+**Yonas Valentin Mougaard Kristensen**  
+[Email](mailto:yonasmougaard@gmail.com)
+
+---
+
+### Offrez-moi un café
+
+Si vous trouvez cette extension utile, veuillez envisager de soutenir mon travail :
+
+En tant que développeur passionné, j'adore résoudre des problèmes et créer des outils qui aident les autres dans leur parcours de codage. ErrorClipper est né du désir de simplifier le processus de débogage, le rendant plus facile et plus efficace pour des développeurs comme vous.
+
+Vos contributions peuvent faire une différence significative dans mon travail. Elles m'aident non seulement à maintenir et à améliorer cette extension, mais elles me permettent également de consacrer plus de temps à la création de nouvelles fonctionnalités et d'outils qui peuvent bénéficier à la communauté des développeurs.
+
+En soutenant mon travail, vous contribuez directement au développement continu et à l'amélioration de ErrorClipper. Chaque contribution compte, et je l'apprécie vraiment.
+
+[![Offrez-moi un café](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/YonasValentin)
